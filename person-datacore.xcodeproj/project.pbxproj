@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3603DA09260BD82B00BF1A90 /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3603DA08260BD82B00BF1A90 /* UIColor+extension.swift */; };
+		3603DA0D260BD85700BF1A90 /* UIView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3603DA0C260BD85700BF1A90 /* UIView+extension.swift */; };
 		36FB619B25EF190500859FAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FB619A25EF190500859FAD /* AppDelegate.swift */; };
 		36FB619D25EF190500859FAD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FB619C25EF190500859FAD /* SceneDelegate.swift */; };
 		36FB619F25EF190500859FAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FB619E25EF190500859FAD /* ViewController.swift */; };
@@ -14,10 +16,13 @@
 		36FB61A525EF190500859FAD /* DataCoreSample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 36FB61A325EF190500859FAD /* DataCoreSample.xcdatamodeld */; };
 		36FB61A725EF190600859FAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36FB61A625EF190600859FAD /* Assets.xcassets */; };
 		36FB61AA25EF190600859FAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36FB61A825EF190600859FAD /* LaunchScreen.storyboard */; };
+		36FB61B425EF193800859FAD /* Person+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FB61B225EF193800859FAD /* Person+CoreDataClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		36FB619725EF190500859FAD /* DataCoreSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataCoreSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3603DA08260BD82B00BF1A90 /* UIColor+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
+		3603DA0C260BD85700BF1A90 /* UIView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extension.swift"; sourceTree = "<group>"; };
+		36FB619725EF190500859FAD /* person-datacore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "person-datacore.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		36FB619A25EF190500859FAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36FB619C25EF190500859FAD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		36FB619E25EF190500859FAD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,6 +31,7 @@
 		36FB61A625EF190600859FAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36FB61A925EF190600859FAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		36FB61AB25EF190600859FAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36FB61B225EF193800859FAD /* Person+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataClass.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,10 +45,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3603DA07260BD80F00BF1A90 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				3603DA08260BD82B00BF1A90 /* UIColor+extension.swift */,
+				3603DA0C260BD85700BF1A90 /* UIView+extension.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		36FB618E25EF190500859FAD = {
 			isa = PBXGroup;
 			children = (
-				36FB619925EF190500859FAD /* DataCoreSample */,
+				36FB619925EF190500859FAD /* Source */,
 				36FB619825EF190500859FAD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,14 +65,16 @@
 		36FB619825EF190500859FAD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				36FB619725EF190500859FAD /* DataCoreSample.app */,
+				36FB619725EF190500859FAD /* person-datacore.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		36FB619925EF190500859FAD /* DataCoreSample */ = {
+		36FB619925EF190500859FAD /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				3603DA07260BD80F00BF1A90 /* Helpers */,
+				36FB61B725EF194000859FAD /* Model */,
 				36FB619A25EF190500859FAD /* AppDelegate.swift */,
 				36FB619C25EF190500859FAD /* SceneDelegate.swift */,
 				36FB619E25EF190500859FAD /* ViewController.swift */,
@@ -67,15 +84,23 @@
 				36FB61AB25EF190600859FAD /* Info.plist */,
 				36FB61A325EF190500859FAD /* DataCoreSample.xcdatamodeld */,
 			);
-			path = DataCoreSample;
+			path = Source;
+			sourceTree = "<group>";
+		};
+		36FB61B725EF194000859FAD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				36FB61B225EF193800859FAD /* Person+CoreDataClass.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		36FB619625EF190500859FAD /* DataCoreSample */ = {
+		36FB619625EF190500859FAD /* person-datacore */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 36FB61AE25EF190600859FAD /* Build configuration list for PBXNativeTarget "DataCoreSample" */;
+			buildConfigurationList = 36FB61AE25EF190600859FAD /* Build configuration list for PBXNativeTarget "person-datacore" */;
 			buildPhases = (
 				36FB619325EF190500859FAD /* Sources */,
 				36FB619425EF190500859FAD /* Frameworks */,
@@ -85,9 +110,9 @@
 			);
 			dependencies = (
 			);
-			name = DataCoreSample;
+			name = "person-datacore";
 			productName = DataCoreSample;
-			productReference = 36FB619725EF190500859FAD /* DataCoreSample.app */;
+			productReference = 36FB619725EF190500859FAD /* person-datacore.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -104,7 +129,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 36FB619225EF190500859FAD /* Build configuration list for PBXProject "DataCoreSample" */;
+			buildConfigurationList = 36FB619225EF190500859FAD /* Build configuration list for PBXProject "person-datacore" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -117,7 +142,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				36FB619625EF190500859FAD /* DataCoreSample */,
+				36FB619625EF190500859FAD /* person-datacore */,
 			);
 		};
 /* End PBXProject section */
@@ -142,6 +167,9 @@
 			files = (
 				36FB61A525EF190500859FAD /* DataCoreSample.xcdatamodeld in Sources */,
 				36FB619F25EF190500859FAD /* ViewController.swift in Sources */,
+				36FB61B425EF193800859FAD /* Person+CoreDataClass.swift in Sources */,
+				3603DA0D260BD85700BF1A90 /* UIView+extension.swift in Sources */,
+				3603DA09260BD82B00BF1A90 /* UIColor+extension.swift in Sources */,
 				36FB619B25EF190500859FAD /* AppDelegate.swift in Sources */,
 				36FB619D25EF190500859FAD /* SceneDelegate.swift in Sources */,
 			);
@@ -292,12 +320,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M2KG87RZWM;
-				INFOPLIST_FILE = DataCoreSample/Info.plist;
+				INFOPLIST_FILE = Source/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.neitzke.DataCoreSample;
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.neitzke.example-datacore";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -311,12 +339,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M2KG87RZWM;
-				INFOPLIST_FILE = DataCoreSample/Info.plist;
+				INFOPLIST_FILE = Source/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.neitzke.DataCoreSample;
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.neitzke.example-datacore";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -326,7 +354,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		36FB619225EF190500859FAD /* Build configuration list for PBXProject "DataCoreSample" */ = {
+		36FB619225EF190500859FAD /* Build configuration list for PBXProject "person-datacore" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				36FB61AC25EF190600859FAD /* Debug */,
@@ -335,7 +363,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		36FB61AE25EF190600859FAD /* Build configuration list for PBXNativeTarget "DataCoreSample" */ = {
+		36FB61AE25EF190600859FAD /* Build configuration list for PBXNativeTarget "person-datacore" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				36FB61AF25EF190600859FAD /* Debug */,

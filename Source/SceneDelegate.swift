@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  DataCoreSample
+//  person-datacore
 //
-//  Created by Neitzke, Cleber (ESI) on 02/03/21.
+//  Created by Cleber Neitzke on 02/03/21.
 //
 
 import UIKit
